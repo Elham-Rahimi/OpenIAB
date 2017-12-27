@@ -10,7 +10,7 @@ android {
         versionCode 24
         versionName '0.9.8.7'
 
-        applicationId 'org.onepf.sample.trivialdrive'
+        applicationId 'org.onepf.sample.trivialdrivetest'
     }
 
     signingConfigs {
@@ -36,6 +36,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
     }
+    buildToolsVersion '25.0.0'
 }
 
 dependencies {

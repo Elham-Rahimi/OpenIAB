@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package org.onepf.sample.trivialdrive;
+package org.onepf.sample.trivialdrivetest;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -31,7 +31,7 @@ import org.onepf.oms.appstore.googleUtils.IabHelper;
 import org.onepf.oms.appstore.googleUtils.IabResult;
 import org.onepf.oms.appstore.googleUtils.Inventory;
 import org.onepf.oms.appstore.googleUtils.Purchase;
-import org.opf.sample.trivialdrive.R;
+import org.opf.sample.trivialdrivetest.R;
 
 
 /**
@@ -198,8 +198,8 @@ public class MainActivity extends Activity {
         Log.d(TAG, "Creating IAB helper.");
         //Only map SKUs for stores that using purchase with SKUs different from described in store console.
         OpenIabHelper.Options.Builder builder = new OpenIabHelper.Options.Builder()
-                .setStoreSearchStrategy(OpenIabHelper.Options.SEARCH_STRATEGY_INSTALLER)
-                .setVerifyMode(OpenIabHelper.Options.VERIFY_ONLY_KNOWN)
+                .setStoreSearchStrategy(OpenIabHelper.Options.SEARCH_STRATEGY_INSTALLER_THEN_BEST_FIT)
+                .setVerifyMode(OpenIabHelper.Options.VERIFY_SKIP)
                 .addStoreKeys(InAppConfig.STORE_KEYS_MAP);
         mHelper = new OpenIabHelper(this, builder.build());
 

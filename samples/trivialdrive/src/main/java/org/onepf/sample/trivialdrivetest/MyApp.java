@@ -1,4 +1,4 @@
-package org.onepf.sample.trivialdrive;
+package org.onepf.sample.trivialdrivetest;
 
 import android.app.Application;
 
